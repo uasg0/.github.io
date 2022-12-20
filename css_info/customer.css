@@ -1,0 +1,109 @@
+/* 页脚与头图透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表透明度为0.5 可以自行修改*/
+    background: rgba(255,255,255,.1);
+}
+
+/* 所有页面背景 */
+#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+    /* 以下代表透明度为0.5 */
+    background: rgba(255,255,255,.1);
+}
+/* 翻页按钮居中 */
+#pagination {
+  width: 100%;
+  margin: auto;
+}
+/* 导航栏上拉颜色 */
+#page-header.nav-fixed #nav {
+	background: #1f1f1f;
+}
+/* 导航栏上拉菜单颜色 */
+#page-header.nav-fixed #nav a, #page-header.nav-fixed #nav #site-name, #page-header.nav-fixed #nav #toggle-menu {
+    color: #f0f0f0;
+    text-shadow: none;
+}
+/* 侧边栏个人信息卡片动态渐变色 
+#aside-content > .card-widget.card-info {
+  background: linear-gradient(
+    -45deg,
+    #e8d8b9,
+    #eccec5,
+    #a3e9eb,
+    #bdbdf0,
+    #eec1ea
+  );
+  box-shadow: 0 0 5px rgb(66, 68, 68);
+  position: relative;
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite !important;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 黑夜模式适配 
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background: #191919ee;
+}
+
+个人信息Follow me按钮 
+#aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #3eb8be;
+  border-radius: 8px;
+}*/
